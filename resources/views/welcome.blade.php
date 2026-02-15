@@ -97,7 +97,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="login-btn" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                                <a href="{{ route('login') }}" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                                     <i class="fas fa-sign-in-alt mr-2"></i>Login
                                 </a>
                             </li>
@@ -117,7 +117,7 @@
             <div id="mobile-menu" class="mobile-menu md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 transform -translate-y-2 opacity-0 pointer-events-none">
                 <ul class="space-y-4">
                     <li>
-                        <a href="#inicio" class="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b">
+                        <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b">
                             <i class="fas fa-home mr-3"></i>Inicio
                         </a>
                     </li>
