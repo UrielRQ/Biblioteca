@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoriasController;
 
 Route::get('/', function () {
     return view('welcome');  //no se pone welcome.blade.php
@@ -16,4 +17,8 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('/categorias', [CategoriasController::class, 'index'])->name('categorias.index');
+    Route::get('/categorias/create', [CategoriasController::class, 'create'])->name('categorias.create');
+    Route::post('/categorias/store', [CategoriasController::class, 'store'])->name('categorias.store');
 });

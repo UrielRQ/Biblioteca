@@ -29,32 +29,11 @@
 </head>
 <body class="bg-gray-100">
 
-    
-    <!-- Contenedor principal
-    <div class="w-full max-w-6xl mx-auto fade-in">
-        
-        Encabezado
-        <header class="text-center mb-10">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Sistema de Autenticación</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto">Formularios responsivos para login y registro de usuarios con estilos compartidos</p>
-        </header>
-        
-        
-        
-        
-    </div> -->
+
 </body>
 </html>
 
-<!-- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Biblioteca</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
-    
+   
     <!-- Contenedor principal -->
     <div class="flex min-h-screen">
         <!-- Sidebar para pantallas grandes -->
@@ -70,7 +49,7 @@
             <nav class="p-4 flex-grow">
                 <ul class="space-y-2">
                     <li>
-                        <a href="#" data-page="inicio" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                        <a href="{{ route('home') }}" data-page="inicio" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
                             <i class="fas fa-home mr-3"></i>
                             Inicio
                         </a>
@@ -79,6 +58,12 @@
                         <a href="#" data-page="libros" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
                             <i class="fas fa-book mr-3"></i>
                             Libros
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('categorias.index') }}" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                            <i class="fas fa-tags mr-3"></i>
+                            Categorías
                         </a>
                     </li>
                     <li>
