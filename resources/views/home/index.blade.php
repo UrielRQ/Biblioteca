@@ -2,81 +2,132 @@
 
 @section('content')
 
-<!-- Contenido dinámico -->
 <main class="flex-1 p-6">
-    <div id="content" class="bg-white rounded-lg shadow p-6">
-        <!-- Contenido de la página de inicio por defecto -->
-        <div id="inicio-content" class="page-content">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Panel de Administración - Biblioteca</h2>
+    <div id="content" class="bg-white rounded-lg shadow-lg p-6 min-h-screen">
+        
+        <div id="inicio-content" class="page-content animate-fade-in-down">
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
-                    <div class="flex items-center">
-                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
-                            <i class="fas fa-users text-blue-600 text-xl"></i>
-                        </div>
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">Panel de Administración</h2>
+                    <p class="text-gray-500 mt-1">Resumen general de la actividad de la biblioteca.</p>
+                </div>
+                <button class="mt-4 md:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg shadow-sm text-sm font-medium transition flex items-center">
+                    <i class="fas fa-file-export mr-2"></i> Generar Reporte
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-lg">Usuarios Registrados</h3>
-                            <p class="text-3xl font-bold text-blue-700">1,245</p>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Usuarios Registrados</p>
+                            <h3 class="text-3xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">1,245</h3>
                         </div>
+                        <div class="bg-blue-50 text-blue-600 p-4 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center text-sm">
+                        <span class="text-green-500 font-semibold flex items-center bg-green-50 px-2 py-0.5 rounded-full">
+                            <i class="fas fa-arrow-up mr-1 text-xs"></i> 12%
+                        </span>
+                        <span class="text-gray-400 ml-2">vs mes anterior</span>
                     </div>
                 </div>
                 
-                <div class="bg-green-50 p-5 rounded-lg border border-green-100">
-                    <div class="flex items-center">
-                        <div class="bg-green-100 p-3 rounded-lg mr-4">
-                            <i class="fas fa-book text-green-600 text-xl"></i>
-                        </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-lg">Libros Disponibles</h3>
-                            <p class="text-3xl font-bold text-green-700">8,752</p>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Libros Disponibles</p>
+                            <h3 class="text-3xl font-bold text-gray-800 group-hover:text-green-600 transition-colors">8,752</h3>
                         </div>
+                        <div class="bg-green-50 text-green-600 p-4 rounded-xl group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-book text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center text-sm">
+                        <span class="text-green-500 font-semibold flex items-center bg-green-50 px-2 py-0.5 rounded-full">
+                            <i class="fas fa-plus mr-1 text-xs"></i> 45
+                        </span>
+                        <span class="text-gray-400 ml-2">nuevos esta semana</span>
                     </div>
                 </div>
                 
-                <div class="bg-purple-50 p-5 rounded-lg border border-purple-100">
-                    <div class="flex items-center">
-                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
-                            <i class="fas fa-exchange-alt text-purple-600 text-xl"></i>
-                        </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-lg">Préstamos Activos</h3>
-                            <p class="text-3xl font-bold text-purple-700">324</p>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Préstamos Activos</p>
+                            <h3 class="text-3xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">324</h3>
                         </div>
+                        <div class="bg-purple-50 text-purple-600 p-4 rounded-xl group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-exchange-alt text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center text-sm">
+                        <span class="text-orange-500 font-semibold flex items-center bg-orange-50 px-2 py-0.5 rounded-full">
+                            <i class="fas fa-clock mr-1 text-xs"></i> 5
+                        </span>
+                        <span class="text-gray-400 ml-2">vencen hoy</span>
                     </div>
                 </div>
             </div>
             
-            <div class="bg-gray-50 p-5 rounded-lg">
-                <h3 class="font-bold text-lg mb-4">Actividad Reciente</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-center border-b pb-3">
-                        <i class="fas fa-user-plus text-green-500 mr-3"></i>
-                        <div>
-                            <p class="font-medium">Nuevo usuario registrado: María González</p>
-                            <p class="text-sm text-gray-500">Hace 2 horas</p>
-                        </div>
-                    </li>
-                    <li class="flex items-center border-b pb-3">
-                        <i class="fas fa-book text-blue-500 mr-3"></i>
-                        <div>
-                            <p class="font-medium">Libro devuelto: "Cien años de soledad"</p>
-                            <p class="text-sm text-gray-500">Hace 5 horas</p>
-                        </div>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-3"></i>
-                        <div>
-                            <p class="font-medium">Préstamo vencido: "El principito"</p>
-                            <p class="text-sm text-gray-500">Hace 1 día</p>
-                        </div>
-                    </li>
-                </ul>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+                    <h3 class="text-lg font-bold text-gray-800">Actividad Reciente</h3>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-medium hover:underline transition">Ver historial completo</a>
+                </div>
+                
+                <div class="p-6">
+                    <ul class="relative border-l-2 border-gray-100 ml-3 space-y-8">
+                        
+                        <li class="ml-8 relative">
+                            <span class="absolute -left-11 flex items-center justify-center w-8 h-8 bg-green-100 rounded-full ring-4 ring-white">
+                                <i class="fas fa-user-plus text-green-600 text-xs"></i>
+                            </span>
+                            <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-sm font-bold text-gray-800">Nuevo registro</h4>
+                                    <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Hace 2 horas</span>
+                                </div>
+                                <p class="text-sm text-gray-600">El usuario <span class="font-semibold text-gray-800">María González</span> ha completado su registro.</p>
+                            </div>
+                        </li>
+
+                        <li class="ml-8 relative">
+                            <span class="absolute -left-11 flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full ring-4 ring-white">
+                                <i class="fas fa-book-reader text-blue-600 text-xs"></i>
+                            </span>
+                            <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-sm font-bold text-gray-800">Devolución de libro</h4>
+                                    <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Hace 5 horas</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Se ha devuelto el ejemplar <span class="italic text-gray-800">"Cien años de soledad"</span>.</p>
+                            </div>
+                        </li>
+
+                        <li class="ml-8 relative">
+                            <span class="absolute -left-11 flex items-center justify-center w-8 h-8 bg-red-100 rounded-full ring-4 ring-white">
+                                <i class="fas fa-exclamation-triangle text-red-500 text-xs"></i>
+                            </span>
+                            <div class="bg-white p-4 rounded-lg border border-red-50 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-sm font-bold text-red-700">Préstamo vencido</h4>
+                                    <span class="text-xs text-red-500 font-bold bg-red-50 px-2 py-1 rounded">Hace 1 día</span>
+                                </div>
+                                <p class="text-sm text-gray-600">El libro <span class="italic text-gray-800">"El principito"</span> no ha sido entregado a tiempo.</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </div>
         
-        <!-- Contenido de la página de usuarios -->
-        <div id="usuarios-content" class="page-content hidden">
+        <div id="usuarios-content" class="page-content hidden animate-fade-in-down">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Gestión de Usuarios</h2>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-200 rounded-lg">
@@ -133,11 +184,10 @@
             </div>
         </div>
         
-        <!-- Contenido de la página de libros -->
-        <div id="libros-content" class="page-content hidden">
+        <div id="libros-content" class="page-content hidden animate-fade-in-down">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Gestión de Libros</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="border rounded-lg p-5 hover:shadow-md">
+                <div class="border rounded-lg p-5 hover:shadow-md transition">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-bold text-lg">Cien años de soledad</h3>
                         <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Disponible</span>
@@ -150,7 +200,7 @@
                     </div>
                 </div>
                 
-                <div class="border rounded-lg p-5 hover:shadow-md">
+                <div class="border rounded-lg p-5 hover:shadow-md transition">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-bold text-lg">El principito</h3>
                         <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Prestado</span>
@@ -163,7 +213,7 @@
                     </div>
                 </div>
                 
-                <div class="border rounded-lg p-5 hover:shadow-md">
+                <div class="border rounded-lg p-5 hover:shadow-md transition">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-bold text-lg">Don Quijote de la Mancha</h3>
                         <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Disponible</span>
@@ -183,8 +233,7 @@
             </div>
         </div>
         
-        <!-- Contenido de la página de préstamos -->
-        <div id="prestamos-content" class="page-content hidden">
+        <div id="prestamos-content" class="page-content hidden animate-fade-in-down">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Gestión de Préstamos</h2>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-200 rounded-lg">
@@ -233,19 +282,18 @@
             </div>
         </div>
         
-        <!-- Contenido de la página de salir -->
-        <div id="salir-content" class="page-content hidden">
+        <div id="salir-content" class="page-content hidden animate-fade-in-down">
             <div class="text-center py-12">
-                <div class="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-sign-out-alt text-red-600 text-3xl"></i>
+                <div class="w-24 h-24 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-sign-out-alt text-red-500 text-3xl"></i>
                 </div>
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Cerrar Sesión</h2>
-                <p class="text-gray-600 max-w-md mx-auto mb-8">¿Está seguro que desea salir del sistema de administración de la biblioteca? Será redirigido a la página de inicio de sesión.</p>
+                <p class="text-gray-600 max-w-md mx-auto mb-8">¿Está seguro que desea salir del sistema? Será redirigido a la página de inicio de sesión.</p>
                 <div class="flex justify-center space-x-4">
-                    <button id="confirm-logout" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700">
+                    <button id="confirm-logout" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 shadow-md transition">
                         Sí, salir del sistema
                     </button>
-                    <button id="cancel-logout" class="bg-gray-300 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-400">
+                    <button id="cancel-logout" class="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition">
                         Cancelar
                     </button>
                 </div>
@@ -253,5 +301,15 @@
         </div>
     </div>
 </main>
+
+<style>
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-down {
+        animation: fadeInDown 0.4s ease-out;
+    }
+</style>
 
 @endsection

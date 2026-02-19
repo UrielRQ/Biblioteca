@@ -19,19 +19,7 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex flex-col items-center justify-center p-4">
-    
-    <!-- Contenedor principal
-    <div class="w-full max-w-6xl mx-auto fade-in">
-        
-        Encabezado
-        <header class="text-center mb-10">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Sistema de Autenticación</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto">Formularios responsivos para login y registro de usuarios con estilos compartidos</p>
-        </header>
-    </div> -->
-    
  </body> 
-<!-- </html> -->
 
 @yield('content')
 

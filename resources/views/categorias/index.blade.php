@@ -4,6 +4,12 @@
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold mb-6">Categorías</h1>
 
+        @if(session('success'))
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <a href="{{ route('categorias.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Agregar Categoría</a>
         <br><br>
 
@@ -20,6 +26,14 @@
                         <tr>
                             <td class="px-4 py-2 border-b">{{ $categoria->id }}</td>
                             <td class="px-4 py-2 border-b">{{ $categoria->nombre }}</td>
+                            <td class="px-4 py-2 border-b">
+                                <a href="{{ route('categorias.edit', $categoria->id) }}" class="text-blue-500 hover:text-blue-700 mr-2">Editar</a>
+                                <form action="" method="POST" class="inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
