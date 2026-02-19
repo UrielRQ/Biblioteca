@@ -19,20 +19,45 @@
                     <tr>
                         <th class="px-4 py-2 border-b">ID</th>
                         <th class="px-4 py-2 border-b">Nombre</th>
+                        <th class="px-4 py-2 border-b">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($categorias as $categoria)
+                    <!-- @foreach ($categorias as $categoria)
                         <tr>
                             <td class="px-4 py-2 border-b">{{ $categoria->id }}</td>
                             <td class="px-4 py-2 border-b">{{ $categoria->nombre }}</td>
                             <td class="px-4 py-2 border-b">
                                 <a href="{{ route('categorias.edit', $categoria->id) }}" class="text-blue-500 hover:text-blue-700 mr-2">Editar</a>
-                                <form action="" method="POST" class="inline">
+                                <form action="{{ route('categorias.destroy', $categoria->id) }}" method="POST" class="inline">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
                                 </form>
+                            </td>
+                        </tr>
+                    @endforeach -->
+                    @foreach ($categorias as $categoria)
+                        <tr>
+                            <td class="px-4 py-2 border-b">{{ $categoria->id }}</td>
+                            <td class="px-4 py-2 border-b">{{ $categoria->nombre }}</td>
+                            <td class="px-4 py-2 border-b">
+                                <div class="flex items-center space-x-2">
+                                    <a href="{{ route('categorias.edit', $categoria->id) }}" 
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded shadow-sm text-sm transition-colors">
+                                        Editar
+                                    </a>
+                                    
+                                    <form action="{{ route('categorias.destroy', $categoria->id) }}" method="POST" class="inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" 
+                                                class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded shadow-sm text-sm transition-colors"
+                                                onclick="return confirm('¿Estás seguro de eliminar esta categoría?')">
+                                            Eliminar
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

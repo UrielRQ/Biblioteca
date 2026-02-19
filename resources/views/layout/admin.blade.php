@@ -102,7 +102,7 @@
                     <nav class="hidden md:block">
                         <ul class="flex space-x-1">
                             <li>
-                                <a href="#" data-page="inicio" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                                <a href="{{ route('home') }}" data-page="inicio" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-gray-700 hover:text-blue-600">
                                     Inicio
                                 </a>
                             </li>
