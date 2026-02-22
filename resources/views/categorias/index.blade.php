@@ -13,7 +13,7 @@
         <a href="{{ route('categorias.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Agregar Categoría</a>
         <br><br>
 
-        <div class="bg-white shadow-md rounded-lg p-6">
+        <div class="bg-gray-800 shadow-md rounded-lg p-6">
             <table class="min-w-full table-auto">
                 <thead>
                     <tr>

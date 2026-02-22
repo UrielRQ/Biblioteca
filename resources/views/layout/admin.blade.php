@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-900 text-gray-200">
 
 
 </body>
@@ -37,43 +37,43 @@
     <!-- Contenedor principal -->
     <div class="flex min-h-screen">
         <!-- Sidebar para pantallas grandes -->
-        <aside id="sidebar" class="sidebar-transition bg-white w-64 shadow-lg md:flex flex-col hidden">
+        <aside id="sidebar" class="sidebar-transition bg-gray-800 w-64 shadow-lg md:flex flex-col hidden">
             <div class="p-6 border-b">
                 <h1 class="text-xl font-bold text-blue-700 flex items-center">
                     <i class="fas fa-book mr-2"></i>
                     Biblioteca Central
                 </h1>
-                <p class="text-gray-500 text-sm mt-1">Panel de administración</p>
+                <p class="text-white text-sm mt-1">Panel de administración</p>
             </div>
             
             <nav class="p-4 flex-grow">
                 <ul class="space-y-2">
                     <li>
-                        <a href="{{ route('home') }}" data-page="inicio" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                        <a href="{{ route('home') }}" data-page="inicio" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
                             <i class="fas fa-home mr-3"></i>
                             Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-page="libros" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                        <a href="{{ route('home') }}" data-page="libros" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
                             <i class="fas fa-book mr-3"></i>
                             Libros
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('categorias.index') }}" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                        <a href="{{ route('categorias.index') }}" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
                             <i class="fas fa-tags mr-3"></i>
                             Categorías
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-page="prestamos" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                        <a href="#" data-page="prestamos" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
                             <i class="fas fa-exchange-alt mr-3"></i>
                             Préstamos
                         </a>
                     </li>
                     <li class="pt-6 mt-6 border-t">
-                        <a href="{{ route('logout') }}" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">
+                        <a href="{{ route('logout') }}" class="flex items-center p-3 rounded-lg text-white hover:bg-red-50 hover:text-red-600 transition-colors duration-200">
                             <i class="fas fa-sign-out-alt mr-3"></i>
                             Salir
                         </a>
@@ -81,7 +81,7 @@
                 </ul>
             </nav>
             
-            <div class="p-4 border-t text-center text-sm text-gray-500">
+            <div class="p-4 border-t text-center text-sm text-white-500">
                 <p>© 2023 Biblioteca Central</p>
             </div>
         </aside>
@@ -89,10 +89,10 @@
         <!-- Contenido principal -->
         <div class="flex-1 flex flex-col">
             <!-- Header -->
-            <header class="bg-white shadow">
+            <header class="bg-gray-800 shadow">
                 <div class="flex justify-between items-center p-4">
                     <!-- Botón hamburguesa para móvil -->
-                    <button id="hamburger-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <button id="hamburger-btn" class="md:hidden text-white focus:outline-none">
                         <div class="hamburger-line w-6 h-0.5 bg-gray-700 mb-1.5"></div>
                         <div class="hamburger-line w-6 h-0.5 bg-gray-700 mb-1.5"></div>
                         <div class="hamburger-line w-6 h-0.5 bg-gray-700"></div>
@@ -102,27 +102,27 @@
                     <nav class="hidden md:block">
                         <ul class="flex space-x-1">
                             <li>
-                                <a href="{{ route('home') }}" data-page="inicio" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                                <a href="{{ route('home') }}" data-page="inicio" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Inicio
                                 </a>
                             </li>
                             <li>
-                                <a href="#" data-page="usuarios" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                                <a href="#" data-page="usuarios" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Usuarios
                                 </a>
                             </li>
                             <li>
-                                <a href="#" data-page="libros" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                                <a href="{{ route('home') }}#libros" data-page="libros" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Libros
                                 </a>
                             </li>
                             <li>
-                                <a href="#" data-page="prestamos" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-gray-700 hover:text-blue-600">
+                                <a href="#" data-page="prestamos" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Préstamos
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('logout') }}" data-page="salir" class="header-menu-item px-4 py-2 rounded-md hover:bg-red-50 text-gray-700 hover:text-red-600">
+                                <a href="{{ route('logout') }}" data-page="salir" class="header-menu-item px-4 py-2 rounded-md hover:bg-red-50 text-white hover:text-red-600">
                                     Salir
                                 </a>
                             </li>

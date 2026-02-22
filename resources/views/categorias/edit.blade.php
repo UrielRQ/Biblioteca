@@ -9,7 +9,7 @@
             @method('PUT')
 
             <div class="mb-4">
-                <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre:</label>
+                <label for="nombre" class="block text-white font-bold mb-2">Nombre:</label>
                 <input type="text" name="nombre" id="nombre" value="{{ old('nombre', $categoria->nombre) }}" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
             </div>
 
