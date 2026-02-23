@@ -319,10 +319,18 @@
                                 <td class="px-4 py-3">
                                     <div class="flex items-center space-x-3">
                                         <button class="text-blue-600 hover:text-blue-800 transition-colors" title="Editar">
-                                            <i class="fas fa-edit mr-1"></i> Editar
+                                            <a href="{{ route('libros.edit', $libro->id) }}" class="flex items-center">
+                                                <i class="fas fa-edit mr-1"></i> Editar
+                                            </a>
                                         </button>
                                         <button class="text-red-600 hover:text-red-800 transition-colors" title="Eliminar">
-                                            <i class="fas fa-trash mr-1"></i> Eliminar
+                                            <form action="{{ route('libros.destroy', $libro->id) }}" method="POST" class="inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="flex items-center">
+                                                    <i class="fas fa-trash mr-1"></i> Eliminar
+                                                </button>
+                                            </form>
                                         </button>
                                     </div>
                                 </td>
