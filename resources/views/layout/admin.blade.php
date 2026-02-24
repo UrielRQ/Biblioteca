@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}" data-page="libros" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
+                        <a href="{{ route('libros.index') }}" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
                             <i class="fas fa-book mr-3"></i>
                             Libros
                         </a>
@@ -112,7 +112,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('home') }}#libros" data-page="libros" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
+                                <a href="{{ route('libros.index') }}" data-page="libros" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Libros
                                 </a>
                             </li>

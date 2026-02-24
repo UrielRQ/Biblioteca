@@ -8,6 +8,13 @@ use App\Models\Libro;
 
 class LibrosController extends Controller
 {
+
+    public function index()
+    {
+        $libros = Libro::with('categoria')->paginate(5); // El 5 indica cuántos libros quieres por página
+        return view('libros.index', compact('libros'));
+    }
+
     public function create()
     {
         $categorias = Categoria::all();
@@ -35,7 +42,7 @@ class LibrosController extends Controller
         $libro->save();
 
         // Redirigir a la página de libros con un mensaje de éxito
-        return redirect()->route('home')->with('success', 'Libro creado exitosamente');
+        return redirect()->route('libros.index')->with('success', 'Libro creado exitosamente');
     }
 
     public function edit($id)
@@ -66,7 +73,7 @@ class LibrosController extends Controller
         $libro->save();
 
         // Redirigir a la página de libros con un mensaje de éxito
-        return redirect()->route('home')->with('success', 'Libro actualizado exitosamente');
+        return redirect()->route('libros.index')->with('success', 'Libro actualizado exitosamente');
     }
 
     public function destroy($id)
@@ -74,6 +81,6 @@ class LibrosController extends Controller
         $libro = Libro::findOrFail($id);
         $libro->delete();
 
-        return redirect()->route('home')->with('success', 'Libro eliminado exitosamente');
+        return redirect()->route('libros.index')->with('success', 'Libro eliminado exitosamente');
     }
 }

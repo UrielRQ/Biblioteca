@@ -13,8 +13,6 @@
                 <input type="text" name="nombre" id="nombre" value="{{ old('nombre', $libro->nombre) }}" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
             </div>
 
-            
-
             <div class="mb-4">
                 <label for="isbn" class="block text-white font-bold mb-2">ISBN:</label>
                 <input type="text" name="isbn" id="isbn" value="{{ old('isbn', $libro->isbn) }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline" required>
