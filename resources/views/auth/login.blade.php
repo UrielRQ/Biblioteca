@@ -35,7 +35,17 @@
                 </div>
 
                 <form action="{{ route('login') }}" method="POST" class="space-y-6">
-                    @csrf 
+                    @csrf
+
+                    @if($errors->any())
+                        <div class="mb-4 bg-red-100 text-red-800 p-3 rounded">
+                            <ul class="list-disc list-inside">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-2">Correo Electrónico</label>
@@ -43,7 +53,7 @@
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fas fa-envelope text-gray-300"></i>
                             </div>
-                            <input type="email" name="email" required placeholder="admin@biblioteca.com" 
+                            <input type="email" name="email" required placeholder="admin@biblioteca.com" value="{{ old('email') }}"
                                 class="text-white w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors">
                         </div>
                     </div>
@@ -61,7 +71,7 @@
                     
                     <div class="flex items-center justify-between text-sm">
                         <label class="flex items-center text-gray-400 cursor-pointer">
-                            <input type="checkbox" name="remember" class="mr-2 h-4 w-4 text-blue-600 rounded focus:ring-blue-500 border-gray-300"> 
+                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} class="mr-2 h-4 w-4 text-blue-600 rounded focus:ring-blue-500 border-gray-300"> 
                             Recordarme
                         </label>
                         <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Recuperar clave</a>
@@ -91,13 +101,23 @@
                 <form action="{{ route('register') }}" method="POST" class="space-y-5">
                     @csrf
 
+                    @if($errors->any())
+                        <div class="mb-4 bg-red-100 text-red-800 p-3 rounded">
+                            <ul class="list-disc list-inside">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-2">Nombre Completo</label>
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fas fa-user text-gray-300"></i>
                             </div>
-                            <input type="text" name="name" required placeholder="Tu nombre" 
+                            <input type="text" name="name" required placeholder="Tu nombre" value="{{ old('name') }}"
                                 class="text-white w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition-colors">
                         </div>
                     </div>
@@ -108,7 +128,7 @@
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fas fa-envelope text-gray-300"></i>
                             </div>
-                            <input type="email" name="email" required placeholder="tu@correo.com" 
+                            <input type="email" name="email" required placeholder="tu@correo.com" value="{{ old('email') }}"
                                 class="text-white w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition-colors">
                         </div>
                     </div>

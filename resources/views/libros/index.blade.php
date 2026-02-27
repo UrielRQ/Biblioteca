@@ -4,7 +4,7 @@
 <!-- Sección de gestión de libros -->
  <!-- <main class="flex-1 p-6"> -->
     <!-- <div id="content" class="bg-gray-800 rounded-lg shadow-lg p-6 min-h-screen"> -->
-        <div id="libros-content" class="container mx-auto px-4 py-8"> 
+        <div id="libros-content" class="container mx-auto px-4 py-8 animate-fade-in-down"> 
             <h2 class="text-2xl font-bold text-gray-100 mb-6">Gestión de Libros</h2>
 
             <!-- Sección de estadísticas rápidas -->
