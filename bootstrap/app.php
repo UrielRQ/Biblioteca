@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
-            'user.type' => \App\Http\Middleware\UserType::class,
+            'user_type' => \App\Http\Middleware\UserType::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

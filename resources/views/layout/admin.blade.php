@@ -67,6 +67,12 @@
                         </a>
                     </li>
                     <li>
+                         <a href="{{ route('usuarios.index') }}" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
+                            <i class="fas fa-users mr-3"></i>
+                            Usuarios
+                        </a>
+                    </li>
+                    <li>
                         <a href="#" data-page="prestamos" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
                             <i class="fas fa-exchange-alt mr-3"></i>
                             Préstamos
@@ -107,7 +113,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" data-page="usuarios" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
+                                <a href="{{ route('usuarios.index') }}" class=" px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Usuarios
                                 </a>
                             </li>

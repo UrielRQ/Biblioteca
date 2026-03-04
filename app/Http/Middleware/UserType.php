@@ -15,7 +15,7 @@ class UserType
      */
     public function handle(Request $request, Closure $next, string $userType): Response
     {
-        if ($request->user()->type !== $userType) {
+        if ($request->user()->user_type !== $userType) {
             abort(403, 'Sin autorización');
         }
 
