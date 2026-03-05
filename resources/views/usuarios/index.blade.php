@@ -4,6 +4,8 @@
     <div class="container mx-auto px-4 py-8 animate-fade-in-down">
         <h2 class="text-2xl font-bold text-gray-100 mb-6">Lista de usuarios</h2>
         
+        <a href="{{ route('usuarios.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Agregar Usuario</a>
+
         <div class="bg-gray-800 rounded-lg shadow-sm border border-gray-100 w-full overflow-hidden">
             <div class="overflow-x-auto w-full">
 
@@ -28,7 +30,7 @@
                                 <td class="px-4 py-3">
                                     <div class="flex items-center space-x-3">
                                         <button class="text-blue-600 hover:text-blue-800 transition-colors" title="Editar">
-                                            <a href="#" class="flex items-center">
+                                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="flex items-center">
                                                         <i class="fas fa-edit mr-1"></i> Editar
                                             </a>
                                         </button>
