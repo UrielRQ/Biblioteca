@@ -35,13 +35,15 @@
                                             </a>
                                         </button>
                                         <button class="text-red-600 hover:text-red-800 transition-colors" title="Eliminar">
-                                            <form action="#" method="POST" class="inline">
+                                            <a href="{{ route('usuarios.delete_confirm', $usuario->id) }}" class="flex items-center">
+                                                    <i class="fas fa-trash mr-1"></i> Eliminar
+                                            <!-- <form action="#" method="POST" class="inline">
                                                 @csrf   
                                                 @method('DELETE')
                                                 <button type="submit" class="flex items-center">
                                                     <i class="fas fa-trash mr-1"></i>Eliminar
                                                 </button>
-                                            </form>
+                                            </form> -->
                                         </button>    
                                     </div>
                                 </td>
