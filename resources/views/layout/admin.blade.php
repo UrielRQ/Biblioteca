@@ -73,7 +73,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-page="prestamos" class="menu-item flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
+                        <a href="{{ route('prestamos.index') }}" class=" flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
                             <i class="fas fa-exchange-alt mr-3"></i>
                             Préstamos
                         </a>
@@ -123,7 +123,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" data-page="prestamos" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
+                                <a href="{{ route('prestamos.index') }}" data-page="prestamos" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Préstamos
                                 </a>
                             </li>
