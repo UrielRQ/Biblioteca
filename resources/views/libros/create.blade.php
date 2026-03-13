@@ -4,7 +4,7 @@
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold mb-6">Agregar Libro</h1>
 
-        <form action="{{ route('libros.store') }}" method="POST" class="bg-grey-800 shadow-md rounded-lg p-6">
+        <form action="{{ route('libros.store') }}" method="POST" class="bg-gray-800 shadow-md rounded-lg p-6">
             @csrf
             <div class="mb-4">
                 <label for="nombre" class="block text-white font-bold mb-2">Nombre del libro:</label>

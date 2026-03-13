@@ -131,8 +131,14 @@
                                 <td class="px-4 py-3 text-grey-100">{{ $libro->isbn }}</td>
                                 <td class="px-4 py-3 text-grey-100">{{ $libro->categoria->nombre }}</td>
                                 <td class="px-4 py-3">
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-semibold">
-                                        Disponible
+                                    
+                                        @if($libro->estatus == 0)
+                                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-semibold">
+                                            Disponible
+                                        @else
+                                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded font-semibold">
+                                            Prestado
+                                        @endif
                                     </span>
                                 </td>
                                 <td class="px-4 py-3">

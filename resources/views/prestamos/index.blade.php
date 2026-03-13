@@ -27,7 +27,7 @@
                     </thead>
                     <tbody class="text-sm">
                         @foreach($prestamos as $prestamo)
-                            <tr class="border-b border-gray-700">
+                            <tr class="hover:bg-gray-100 hover:text-black transition-colors border-b border-gray-100">
                                 <td class="px-4 py-3">{{ $prestamo->id }}</td>
                                 <td class="px-4 py-3">{{ $prestamo->libro->nombre }}</td>
                                 <td class="px-4 py-3">{{ $prestamo->usuario->name }}</td>

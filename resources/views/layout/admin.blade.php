@@ -113,22 +113,27 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('usuarios.index') }}" class=" px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
-                                    Usuarios
-                                </a>
-                            </li>
-                            <li>
                                 <a href="{{ route('libros.index') }}" class="px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Libros
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('prestamos.index') }}" data-page="prestamos" class="header-menu-item px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
+                                <a href="{{ route('categorias.index') }}" class="px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
+                                    Categorías
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('usuarios.index') }}" class=" px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
+                                    Usuarios
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('prestamos.index') }}" class="px-4 py-2 rounded-md hover:bg-blue-50 text-white hover:text-blue-600">
                                     Préstamos
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('logout') }}" data-page="salir" class="header-menu-item px-4 py-2 rounded-md hover:bg-red-50 text-white hover:text-red-600">
+                                <a href="{{ route('logout') }}" class="px-4 py-2 rounded-md hover:bg-red-50 text-white hover:text-red-600">
                                     Salir
                                 </a>
                             </li>
