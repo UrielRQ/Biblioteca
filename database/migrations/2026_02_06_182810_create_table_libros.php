@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('autor', 255);
             $table->string('editorial', 255);
             $table->smallInteger('estatus')->default(0);
-            $table->unsignedBigInteger('usuario_id')->default(0);
+            // $table->unsignedBigInteger('usuario_id')->default(0);
             $table->unsignedBigInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
         });
