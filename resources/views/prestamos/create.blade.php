@@ -33,10 +33,6 @@
             </form>
             @endisset
 
-        </div>
-
-        
-
-        
+        </div>     
 </div>
 @endsection

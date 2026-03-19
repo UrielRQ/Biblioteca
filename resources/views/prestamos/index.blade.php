@@ -22,6 +22,8 @@
                             <th class="px-4 py-3 border-b-2 border-gray-200 font-semibold text-white text-sm">Libro</th>
                             <th class="px-4 py-3 border-b-2 border-gray-200 font-semibold text-white text-sm">Usuario</th>
                             <th class="px-4 py-3 border-b-2 border-gray-200 font-semibold text-white text-sm">Fecha de Préstamo</th>
+                            <th class="px-4 py-3 border-b-2 border-gray-200 font-semibold text-white text-sm">Estatus</th>
+                            <th class="px-4 py-3 border-b-2 border-gray-200 font-semibold text-white text-sm">Fecha de Entrega</th>
                             <th class="px-4 py-3 border-b-2 border-gray-200 font-semibold text-white text-sm">Acciones</th>
                         </tr>
                     </thead>
@@ -33,7 +35,19 @@
                                 <td class="px-4 py-3">{{ $prestamo->usuario->name }}</td>
                                 <td class="px-4 py-3">{{ $prestamo->created_at->format('d/m/Y') }}</td>
                                 <td class="px-4 py-3">
-                               
+                                    @if($prestamo->estado == 'pendiente')
+                                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded font-semibold">
+                                        Pendiente
+                                    @else
+                                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-semibold">
+                                        Entregado
+                                    @endif
+                                </td>
+                                <td class="px-4 py-3">{{ $prestamo->fecha_entrega ? $prestamo->fecha_entrega : '' }}</td>
+                                <td class="px-4 py-3">
+                                    @if($prestamo->estado == 'pendiente')
+                                        <a href="{{ route('prestamos.entregar', ['id' => $prestamo->id]) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded inline-block">Entregar</a>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
