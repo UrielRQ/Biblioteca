@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Libro;
-use App\models\User;
-use App\models\Prestamo;
+use App\Models\Libro;
+use App\Models\User;
+use App\Models\Prestamo;
 
 class HomeController extends Controller
 {
