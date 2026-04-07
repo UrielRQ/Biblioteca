@@ -16,63 +16,84 @@
                     <i class="fas fa-file-export mr-2"></i> Generar Reporte
                 </button>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                
-                <div class="bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="flex items-center justify-between">
+
+            <!-- Sección de estadísticas rápidas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 mt-4">
+
+                <div class="bg-gray-800 rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
+                    <div class="flex justify-between items-start">
                         <div>
-                            <p class="text-sm font-medium text-gray-500 mb-1">Usuarios Registrados</p>
-                            <h3 class="text-3xl font-bold text-gray-100 group-hover:text-blue-600 transition-colors">1,245</h3>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Total de libros</p>
+                            <h3 class="text-3xl font-bold text-gray-100">{{ $total_libros }}</h3>
                         </div>
-                        <div class="bg-blue-50 text-blue-600 p-4 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-users text-2xl"></i>
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                            <i class="fas fa-book text-blue-500"></i>
                         </div>
                     </div>
-                    <div class="mt-4 flex items-center text-sm">
-                        <span class="text-green-500 font-semibold flex items-center bg-green-50 px-2 py-0.5 rounded-full">
-                            <i class="fas fa-arrow-up mr-1 text-xs"></i> 12%
+                    <!-- <div class="mt-4 flex items-center text-sm">
+                        <span class="text-green-500 font-medium flex items-center">
+                            <i class="fas fa-arrow-up text-xs mr-1"></i> 5.2%
                         </span>
-                        <span class="text-gray-400 ml-2">vs mes anterior</span>
-                    </div>
+                        <span class="text-gray-400 ml-2">desde el mes pasado</span>
+                    </div> -->
                 </div>
-                
-                <div class="bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="flex items-center justify-between">
+
+                <div class="bg-gray-800 rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
+                    <div class="flex justify-between items-start">
                         <div>
-                            <p class="text-sm font-medium text-gray-500 mb-1">Libros Disponibles</p>
-                            <h3 class="text-3xl font-bold text-gray-100 group-hover:text-green-600 transition-colors">8,752</h3>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Libros prestados</p>
+                            <h3 class="text-3xl font-bold text-gray-100">{{ $libros_prestados }}</h3>
                         </div>
-                        <div class="bg-green-50 text-green-600 p-4 rounded-xl group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-book text-2xl"></i>
+                        <div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center">
+                            <i class="fas fa-exchange-alt text-yellow-500"></i>
                         </div>
                     </div>
-                    <div class="mt-4 flex items-center text-sm">
-                        <span class="text-green-500 font-semibold flex items-center bg-green-50 px-2 py-0.5 rounded-full">
-                            <i class="fas fa-plus mr-1 text-xs"></i> 45
+                    <!-- <div class="mt-4 flex items-center text-sm">
+                        <span class="text-red-500 font-medium flex items-center">
+                            <i class="fas fa-arrow-down text-xs mr-1"></i> 2.1%
                         </span>
-                        <span class="text-gray-400 ml-2">nuevos esta semana</span>
-                    </div>
+                        <span class="text-gray-400 ml-2">desde el mes pasado</span>
+                    </div> -->
                 </div>
-                
-                <div class="bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="flex items-center justify-between">
+
+                <div class="bg-gray-800 rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
+                    <div class="flex justify-between items-start">
                         <div>
-                            <p class="text-sm font-medium text-gray-500 mb-1">Préstamos Activos</p>
-                            <h3 class="text-3xl font-bold text-gray-100 group-hover:text-purple-600 transition-colors">324</h3>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Usuarios activos</p>
+                            <h3 class="text-3xl font-bold text-gray-100">{{ $total_usuarios }}</h3>
                         </div>
-                        <div class="bg-purple-50 text-purple-600 p-4 rounded-xl group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-exchange-alt text-2xl"></i>
+                        <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                            <i class="fas fa-users text-green-500"></i>
                         </div>
                     </div>
-                    <div class="mt-4 flex items-center text-sm">
-                        <span class="text-orange-500 font-semibold flex items-center bg-orange-50 px-2 py-0.5 rounded-full">
-                            <i class="fas fa-clock mr-1 text-xs"></i> 5
+                    <!-- <div class="mt-4 flex items-center text-sm">
+                        <span class="text-green-500 font-medium flex items-center">
+                            <i class="fas fa-arrow-up text-xs mr-1"></i> 12.7%
                         </span>
-                        <span class="text-gray-400 ml-2">vencen hoy</span>
-                    </div>
+                        <span class="text-gray-400 ml-2">desde el mes pasado</span>
+                    </div> -->
                 </div>
+
+                <div class="bg-gray-800 rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-sm font-medium text-gray-500 mb-1">Devoluciones pendientes</p>
+                            <h3 class="text-3xl font-bold text-gray-100"> {{ $devoluciones_pendientes }}</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
+                            <i class="fas fa-clock text-red-500"></i>
+                        </div>
+                    </div>
+                    <!-- <div class="mt-4 flex items-center text-sm">
+                        <span class="text-red-500 font-medium flex items-center">
+                            <i class="fas fa-arrow-up text-xs mr-1"></i> 3.4%
+                        </span>
+                        <span class="text-gray-400 ml-2">desde ayer</span>
+                    </div> -->
+                </div>
+
             </div>
+            <!-- Fin de seccion de estadisticas rapidas -->
             
             <div class="bg-gray-800 rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                 <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">

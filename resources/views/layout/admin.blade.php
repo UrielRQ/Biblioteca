@@ -143,11 +143,11 @@
                     <!-- Información de usuario -->
                     <div class="flex items-center">
                         <div class="hidden md:flex flex-col text-right mr-4">
-                            <span class="font-medium">Admin Biblioteca</span>
-                            <span class="text-sm text-gray-500">Administrador</span>
+                            <span class="font-medium">{{ auth()->user()->name }}</span>
+                            <span class="text-sm text-gray-500">{{ auth()->user()->email }}</span>
                         </div>
                         <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-                            <i class="fas fa-user"></i>
+                            <span class="font-bold">{{ substr(auth()->user()->name, 0, 1) }}</span>
                         </div>
                     </div>
                 </div>
