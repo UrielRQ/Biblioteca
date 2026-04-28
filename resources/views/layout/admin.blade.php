@@ -46,7 +46,7 @@
                 <p class="text-white text-sm mt-1">Panel de administración</p>
             </div>
             
-            <nav class="p-4 flex-grow">
+            <nav class="p-4 grow">
                 <ul class="space-y-2">
                     <li>
                         <a href="{{ route('home') }}" data-page="inicio" class="flex items-center p-3 rounded-lg hover:bg-blue-50 text-white hover:text-blue-600">
